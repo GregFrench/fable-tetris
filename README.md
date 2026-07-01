@@ -2,6 +2,8 @@
 
 A guideline-style Tetris game that runs entirely in the browser. No dependencies, no build step — just vanilla HTML, CSS, and JavaScript.
 
+**Play it now: [gregfrench.github.io/fable-tetris](https://gregfrench.github.io/fable-tetris/)**
+
 ## Play
 
 Open `index.html` directly in a browser, or serve the folder:
