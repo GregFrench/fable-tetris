@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟪</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage">
+    <header class="masthead">
+      <h1>TETRIS</h1>
+    </header>
+
+    <main class="layout">
+      <!-- Left column: hold + stats -->
+      <aside class="side side-left">
+        <section class="panel">
+          <h2>Hold</h2>
+          <canvas id="hold-canvas" width="120" height="96"></canvas>
+        </section>
+
+        <section class="panel stats">
+          <div class="stat">
+            <h2>Score</h2>
+            <div class="stat-value" id="score">0</div>
+          </div>
+          <div class="stat">
+            <h2>Best</h2>
+            <div class="stat-value" id="highscore">0</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat">
+              <h2>Level</h2>
+              <div class="stat-value" id="level">1</div>
+            </div>
+            <div class="stat">
+              <h2>Lines</h2>
+              <div class="stat-value" id="lines">0</div>
+            </div>
+          </div>
+          <div class="stat">
+            <h2>Time</h2>
+            <div class="stat-value" id="time">0:00</div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Center: playfield -->
+      <div class="board-wrap">
+        <canvas id="board-canvas" width="320" height="640"></canvas>
+        <div class="action-text" id="action-text"></div>
+
+        <div class="overlay" id="overlay">
+          <div class="overlay-inner" id="overlay-inner">
+            <div class="overlay-title" id="overlay-title">TETRIS</div>
+            <div class="overlay-sub" id="overlay-sub">Press <kbd>Enter</kbd> to play</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: next queue + controls -->
+      <aside class="side side-right">
+        <section class="panel">
+          <h2>Next</h2>
+          <canvas id="next-canvas" width="120" height="336"></canvas>
+        </section>
+
+        <section class="panel controls">
+          <h2>Controls</h2>
+          <ul>
+            <li><kbd>←</kbd><kbd>→</kbd><span>Move</span></li>
+            <li><kbd>↓</kbd><span>Soft drop</span></li>
+            <li><kbd>Space</kbd><span>Hard drop</span></li>
+            <li><kbd>↑</kbd> / <kbd>X</kbd><span>Rotate ↻</span></li>
+            <li><kbd>Z</kbd><span>Rotate ↺</span></li>
+            <li><kbd>C</kbd><span>Hold</span></li>
+            <li><kbd>P</kbd><span>Pause</span></li>
+            <li><kbd>R</kbd><span>Restart</span></li>
+            <li><kbd>M</kbd><span>Sound on/off</span></li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="tetris.js"></script>
+</body>
+</html>
